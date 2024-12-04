@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Light grey background for overall page */
+}
+
+header {
+    background-color: white; /* White background for the top header */
+    color: black;
+    padding: 10px 10%; /* Reduced padding for a tighter header */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: auto; /* Adjust width as needed */
+    height: 100px; /* Increased logo size */
+    margin-bottom: 10px; /* Space below the logo */
+}
+
+.title {
+    width: 100%;
+    background-color: #4CAF50; /* Green background for 'SAIVANA Goes Digital' */
+    color: white; /* White text color */
+    padding: 10px;
+    font-size: 24px; /* Bigger text for visibility */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Shadow for depth */
+}
+
+.bookmarks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px 10%;
+}
+
+.card {
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 20px;
+    background-color: #f9f9f9; /* Slightly grey background for the cards */
+    border: 2px solid #4CAF50; /* Green border for each card */
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+button {
+    background-color: #4CAF50; /* Green background for buttons */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+    .title, .logo {
+        font-size: 18px; /* Smaller font for mobile responsiveness */
+        height: 80px; /* Smaller logo for mobile */
+    }
+}
