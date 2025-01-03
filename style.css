@@ -39,12 +39,19 @@ header {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Shadow for depth */
 }
 
-/* Buttons Section */
-.bookmarks {
+/* Main Content Section */
+.main-content {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.buttons {
+    display: flex;
     justify-content: space-around;
-    padding: 20px 10%;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .card {
@@ -72,8 +79,17 @@ button {
     margin-top: 10px;
 }
 
-a {
-    text-decoration: none;
+.central-image {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.central-image img {
+    width: 60%; /* Adjust the size as needed */
+    max-width: 600px;
+    height: auto;
+    border: 2px solid #4CAF50; /* Green border for the central image */
+    border-radius: 10px; /* Rounded corners */
 }
 
 /* Downloads Section */
@@ -100,11 +116,14 @@ a {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .card {
-        width: 100%;
+    .buttons {
+        flex-direction: column;
+        align-items: center;
     }
-    .title, .logo {
-        font-size: 18px; /* Smaller font for mobile responsiveness */
-        height: 80px; /* Smaller logo for mobile */
+    .card {
+        width: 80%;
+    }
+    .central-image img {
+        width: 90%; /* Adjust image size for smaller screens */
     }
 }
